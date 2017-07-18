@@ -43,6 +43,9 @@
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJX-6g-N6N"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGF-7F-NtD">
                                         <rect key="frame" x="0.0" y="120" width="343" height="30"/>
@@ -84,6 +87,10 @@
                             <constraint firstItem="KLF-ks-yev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFv-HP-sMa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="PBc-Is-y6h" id="5v8-c6-3Oe"/>
+                        <outlet property="pwdField" destination="GCT-OZ-k7G" id="PhQ-gc-O2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
