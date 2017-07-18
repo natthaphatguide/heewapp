@@ -90,10 +90,126 @@
                     <connections>
                         <outlet property="emailField" destination="PBc-Is-y6h" id="5v8-c6-3Oe"/>
                         <outlet property="pwdField" destination="GCT-OZ-k7G" id="PhQ-gc-O2W"/>
+                        <segue destination="E5F-ME-yD6" kind="show" identifier="FeedVC" id="aQd-oa-Stg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="383" y="220"/>
+        </scene>
+        <!--PostVC-->
+        <scene sceneID="Yre-nB-UWN">
+            <objects>
+                <viewController id="2Je-OZ-Vn6" customClass="PostVC" customModule="heewapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IXs-xl-sBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="VTL-40-yuZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Nj-fS-PgW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PostVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiD-rY-NjM">
+                                <rect key="frame" x="159" y="323" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PostVC" id="khT-ny-0HJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVC-FG-PCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="220"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="QKK-13-nz3">
+            <objects>
+                <viewController id="E3x-7Y-vi6" customClass="ProfileVC" customModule="heewapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dbb-WE-Znf"/>
+                        <viewControllerLayoutGuide type="bottom" id="9EC-oq-q9X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h24-ZS-tAY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProfileVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuJ-UO-Bwn">
+                                <rect key="frame" x="152" y="323" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-n4-ydQ">
+                                <rect key="frame" x="308" y="64" width="57" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="E3x-7Y-vi6" eventType="touchUpInside" id="Suq-Jr-FjR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ProfileVC" id="aIB-oD-pU2"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SignInVC" id="uPP-xE-uHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lia-Mk-ZL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="961"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="4qQ-er-HMv">
+            <objects>
+                <viewController id="ERR-n2-URA" customClass="FeedVC" customModule="heewapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uy5-u3-Gke"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYk-yj-DNq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IoN-TN-KQY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FeedVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bes-bY-0Md">
+                                <rect key="frame" x="157" y="323" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="FeedVC" id="dle-dZ-XpZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiQ-xv-SXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182" y="-457"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RO9-2S-bgC">
+            <objects>
+                <tabBarController id="E5F-ME-yD6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ize-aF-jnp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ERR-n2-URA" kind="relationship" relationship="viewControllers" id="ttY-j8-1wW"/>
+                        <segue destination="2Je-OZ-Vn6" kind="relationship" relationship="viewControllers" id="WC6-cA-PzN"/>
+                        <segue destination="E3x-7Y-vi6" kind="relationship" relationship="viewControllers" id="1OS-nN-Rrh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twz-Xv-xWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="220"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,10 @@
 		65394FAF1F1DE134000E8037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65394FAE1F1DE134000E8037 /* Assets.xcassets */; };
 		65394FB21F1DE134000E8037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65394FB01F1DE134000E8037 /* LaunchScreen.storyboard */; };
 		65394FBA1F1DE247000E8037 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65394FB91F1DE247000E8037 /* GoogleService-Info.plist */; };
+		65394FC01F1E785C000E8037 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FBF1F1E785C000E8037 /* Constants.swift */; };
+		65394FC21F1E79DB000E8037 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC11F1E79DB000E8037 /* FeedVC.swift */; };
+		65394FC41F1E7A35000E8037 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC31F1E7A35000E8037 /* PostVC.swift */; };
+		65394FC61F1E7A58000E8037 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC51F1E7A58000E8037 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		65394FB11F1DE134000E8037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65394FB31F1DE134000E8037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65394FB91F1DE247000E8037 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65394FBF1F1E785C000E8037 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65394FC11F1E79DB000E8037 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		65394FC31F1E7A35000E8037 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		65394FC51F1E7A58000E8037 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		A3DB42E934A34BFE438B41F0 /* Pods-heewapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.release.xcconfig"; sourceTree = "<group>"; };
 		C61CF60320B410847D0F3B86 /* Pods-heewapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				65394FA91F1DE134000E8037 /* SignInVC.swift */,
+				65394FC11F1E79DB000E8037 /* FeedVC.swift */,
+				65394FC31F1E7A35000E8037 /* PostVC.swift */,
+				65394FC51F1E7A58000E8037 /* ProfileVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,6 +121,7 @@
 		65394FBE1F1DE258000E8037 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				65394FBF1F1E785C000E8037 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -247,8 +259,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65394FC61F1E7A58000E8037 /* ProfileVC.swift in Sources */,
+				65394FC21F1E79DB000E8037 /* FeedVC.swift in Sources */,
 				65394FAA1F1DE134000E8037 /* SignInVC.swift in Sources */,
 				65394FA81F1DE134000E8037 /* AppDelegate.swift in Sources */,
+				65394FC01F1E785C000E8037 /* Constants.swift in Sources */,
+				65394FC41F1E7A35000E8037 /* PostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
