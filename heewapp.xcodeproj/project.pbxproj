@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5816128C243AC7E3DE75B949 /* Pods_heewapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DA7AFA1CF2C70FCFBCCDE /* Pods_heewapp.framework */; };
 		65394FA81F1DE134000E8037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FA71F1DE134000E8037 /* AppDelegate.swift */; };
-		65394FAA1F1DE134000E8037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FA91F1DE134000E8037 /* ViewController.swift */; };
+		65394FAA1F1DE134000E8037 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FA91F1DE134000E8037 /* SignInVC.swift */; };
 		65394FAD1F1DE134000E8037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65394FAB1F1DE134000E8037 /* Main.storyboard */; };
 		65394FAF1F1DE134000E8037 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65394FAE1F1DE134000E8037 /* Assets.xcassets */; };
 		65394FB21F1DE134000E8037 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65394FB01F1DE134000E8037 /* LaunchScreen.storyboard */; };
+		65394FBA1F1DE247000E8037 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65394FB91F1DE247000E8037 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A2DA7AFA1CF2C70FCFBCCDE /* Pods_heewapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heewapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65394FA41F1DE134000E8037 /* heewapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heewapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65394FA71F1DE134000E8037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65394FA91F1DE134000E8037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65394FA91F1DE134000E8037 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = heewapp/SignInVC.swift; sourceTree = "<group>"; };
 		65394FAC1F1DE134000E8037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65394FAE1F1DE134000E8037 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65394FB11F1DE134000E8037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65394FB31F1DE134000E8037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65394FB91F1DE247000E8037 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3DB42E934A34BFE438B41F0 /* Pods-heewapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.release.xcconfig"; sourceTree = "<group>"; };
+		C61CF60320B410847D0F3B86 /* Pods-heewapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5816128C243AC7E3DE75B949 /* Pods_heewapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440089768E161B420BACF7D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A2DA7AFA1CF2C70FCFBCCDE /* Pods_heewapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65394F9B1F1DE133000E8037 = {
 			isa = PBXGroup;
 			children = (
+				65394FBE1F1DE258000E8037 /* Util */,
+				65394FBB1F1DE249000E8037 /* Model */,
+				65394FBC1F1DE24E000E8037 /* View */,
+				65394FBD1F1DE251000E8037 /* Controller */,
 				65394FA61F1DE134000E8037 /* heewapp */,
 				65394FA51F1DE134000E8037 /* Products */,
+				84322B43F0088A414C64578A /* Pods */,
+				440089768E161B420BACF7D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +76,51 @@
 			isa = PBXGroup;
 			children = (
 				65394FA71F1DE134000E8037 /* AppDelegate.swift */,
-				65394FA91F1DE134000E8037 /* ViewController.swift */,
 				65394FAB1F1DE134000E8037 /* Main.storyboard */,
-				65394FAE1F1DE134000E8037 /* Assets.xcassets */,
 				65394FB01F1DE134000E8037 /* LaunchScreen.storyboard */,
+				65394FAE1F1DE134000E8037 /* Assets.xcassets */,
 				65394FB31F1DE134000E8037 /* Info.plist */,
+				65394FB91F1DE247000E8037 /* GoogleService-Info.plist */,
 			);
 			path = heewapp;
+			sourceTree = "<group>";
+		};
+		65394FBB1F1DE249000E8037 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		65394FBC1F1DE24E000E8037 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		65394FBD1F1DE251000E8037 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65394FA91F1DE134000E8037 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		65394FBE1F1DE258000E8037 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		84322B43F0088A414C64578A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C61CF60320B410847D0F3B86 /* Pods-heewapp.debug.xcconfig */,
+				A3DB42E934A34BFE438B41F0 /* Pods-heewapp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65394FB61F1DE134000E8037 /* Build configuration list for PBXNativeTarget "heewapp" */;
 			buildPhases = (
+				2459951D1DCAED777AC0494A /* [CP] Check Pods Manifest.lock */,
 				65394FA01F1DE134000E8037 /* Sources */,
 				65394FA11F1DE134000E8037 /* Frameworks */,
 				65394FA21F1DE134000E8037 /* Resources */,
+				40426496574C2AAFAE9E4922 /* [CP] Embed Pods Frameworks */,
+				4157D50DCA9D6E73699529D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65394FB21F1DE134000E8037 /* LaunchScreen.storyboard in Resources */,
+				65394FBA1F1DE247000E8037 /* GoogleService-Info.plist in Resources */,
 				65394FAF1F1DE134000E8037 /* Assets.xcassets in Resources */,
 				65394FAD1F1DE134000E8037 /* Main.storyboard in Resources */,
 			);
@@ -131,12 +194,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2459951D1DCAED777AC0494A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40426496574C2AAFAE9E4922 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-heewapp/Pods-heewapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4157D50DCA9D6E73699529D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-heewapp/Pods-heewapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		65394FA01F1DE134000E8037 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65394FAA1F1DE134000E8037 /* ViewController.swift in Sources */,
+				65394FAA1F1DE134000E8037 /* SignInVC.swift in Sources */,
 				65394FA81F1DE134000E8037 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +371,7 @@
 		};
 		65394FB71F1DE134000E8037 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61CF60320B410847D0F3B86 /* Pods-heewapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = heewapp/Info.plist;
@@ -272,6 +384,7 @@
 		};
 		65394FB81F1DE134000E8037 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DB42E934A34BFE438B41F0 /* Pods-heewapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = heewapp/Info.plist;
@@ -301,6 +414,7 @@
 				65394FB81F1DE134000E8037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
