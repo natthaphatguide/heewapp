@@ -14,15 +14,17 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var brand: UILabel!  //(caption = brand)
     @IBOutlet weak var price: UILabel!  //(likesLbl = price)
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     } 
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(post: Post) {
+        self.post = post
+        self.brand.text = post.brand
+        self.price.text = "\(post.price)"
     }
 
 }

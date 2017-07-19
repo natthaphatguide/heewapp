@@ -32,11 +32,10 @@ class SignInVC: UIViewController {
     @IBAction func facebookBtnPressed(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
-        
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) {(result, error) in
             
             if error != nil {
-                print("GUIDE: Unable to authenticate with Facebook -\(error)")
+                print("GUIDE: Unable to authenticate with Facebook")
             } else if result?.isCancelled == true {
                 print("GUIDE: User   authenticate with Facebook")
             } else {
@@ -49,13 +48,13 @@ class SignInVC: UIViewController {
     
     func firebaseAuth(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential, completion: {(user, error) in
-            
             if error != nil {
-                print("GUIDE: Unable to authenticate with Firebase/Facebook -\(error)")
+                print("GUIDE: Unable to authenticate with Firebase/Facebook")
             } else {
                 print("GUIDE: Successfully authenticated with Firebase/Facebook")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
         })
@@ -68,17 +67,19 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("GUIDE: Successfully email user authenticated with Firebase (Sign in)")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     // SIGNUP FIREBASE
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
-                            print("GUIDE: Unable to authenticate with Firebase using email -\(error)")
+                            print("GUIDE: Unable to authenticate with Firebase using email")
                         } else {
                             print("GUIDE: Successfully email user authenticated with Firebase (Sign up)")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -87,7 +88,8 @@ class SignInVC: UIViewController {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUSER(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("GUIDE: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "FeedVC", sender: nil)
