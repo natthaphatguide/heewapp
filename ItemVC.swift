@@ -1,5 +1,5 @@
 //
-//  PostVC.swift
+//  ItemVC.swift
 //  heewapp
 //
 //  Created by Natthaphat on 7/19/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostVC: UIViewController {
+class ItemVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +33,3 @@ class PostVC: UIViewController {
     */
 
 }
-
-
