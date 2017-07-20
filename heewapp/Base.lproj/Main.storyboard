@@ -152,13 +152,18 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="postBtnPressed:" destination="2Je-OZ-Vn6" eventType="touchUpInside" id="kle-73-GCK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="PostVC" id="khT-ny-0HJ"/>
                     <connections>
+                        <outlet property="brandField" destination="yC7-hp-0hp" id="AdO-ZN-fzu"/>
                         <outlet property="imageAdd" destination="kXv-Pw-tUg" id="S0h-aw-ji0"/>
+                        <outlet property="priceField" destination="d61-U9-c03" id="qS6-Sh-LMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVC-FG-PCk" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageAdd: UIImageView!
-
+    @IBOutlet weak var brandField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
+    
+    var imageSelected = false
+    
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
@@ -26,6 +31,7 @@ class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print ("GUIDE: A valide image wasn't selected")
         }
@@ -35,6 +41,42 @@ class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationCont
     @IBAction func addImagePressed(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    //Section 159: Upload/Post data
+    @IBAction func postBtnPressed(_ sender: Any) {
+        
+        guard let brand = brandField.text, brand != "" else {
+            print("GUIDE: Brand must be entered")
+            return
+        }
+        
+        guard let price = priceField.text, price != "" else {
+            print("GUIDE: Price must be entered")
+            return
+        }
+        
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("GUIDE: Image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata, completion: { (metadata, error) in
+                if error != nil {
+                    print("GUide: Unable to upload image to Firebase Storage")
+                } else {
+                    print("GUide: Successfully uploaded image to Firebase Storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            })
+        }
+        
+    }
+    
 }
 
 

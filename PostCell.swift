@@ -27,7 +27,7 @@ class PostCell: UITableViewCell {
         self.brand.text = post.brand
         self.price.text = "\(post.price)"
         
-        //Section 159: Downloading files from Firebase Storage
+        //Section 158: Downloading files from Firebase Storage
         if img != nil {
             self.postImg.image = img
         } else {
