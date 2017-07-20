@@ -67,13 +67,35 @@ class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationCont
             
             DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata, completion: { (metadata, error) in
                 if error != nil {
-                    print("GUide: Unable to upload image to Firebase Storage")
+                    print("GUIDE: Unable to upload image to Firebase Storage")
                 } else {
-                    print("GUide: Successfully uploaded image to Firebase Storage")
+                    print("GUIDE: Successfully uploaded image to Firebase Storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                    }
                 }
             })
         }
+        
+    }
+    
+    func postToFirebase(imgUrl:String) {
+        let post: Dictionary<String, Any> = [
+            "imageUrl": imgUrl,
+            "brand": brandField.text!,
+            "price": 0              //How to post number??
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        imageSelected = false
+        imageAdd.image = UIImage(named: "placeholder")
+        brandField.text = ""
+        priceField.text = ""
+        
+        //tableView.reloadData()
         
     }
     
