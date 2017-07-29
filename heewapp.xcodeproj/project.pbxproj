@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5816128C243AC7E3DE75B949 /* Pods_heewapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2DA7AFA1CF2C70FCFBCCDE /* Pods_heewapp.framework */; };
+		6511ADE61F23937800F914F7 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511ADE51F23937800F914F7 /* ProductVC.swift */; };
 		65394FA81F1DE134000E8037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FA71F1DE134000E8037 /* AppDelegate.swift */; };
 		65394FAA1F1DE134000E8037 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FA91F1DE134000E8037 /* SignInVC.swift */; };
 		65394FAD1F1DE134000E8037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65394FAB1F1DE134000E8037 /* Main.storyboard */; };
@@ -18,14 +19,17 @@
 		65394FC21F1E79DB000E8037 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC11F1E79DB000E8037 /* FeedVC.swift */; };
 		65394FC41F1E7A35000E8037 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC31F1E7A35000E8037 /* PostVC.swift */; };
 		65394FC61F1E7A58000E8037 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC51F1E7A58000E8037 /* ProfileVC.swift */; };
-		65394FC81F1F5435000E8037 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC71F1F5435000E8037 /* ItemVC.swift */; };
 		65394FCA1F1F5744000E8037 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FC91F1F5744000E8037 /* PostCell.swift */; };
 		65394FCD1F1F6B54000E8037 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FCC1F1F6B54000E8037 /* DataService.swift */; };
 		65394FCF1F1FB3A6000E8037 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65394FCE1F1FB3A6000E8037 /* Post.swift */; };
+		654D59741F27AF550029577E /* Posttest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D59731F27AF550029577E /* Posttest.swift */; };
+		654D59761F287F9E0029577E /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D59751F287F9E0029577E /* NotificationVC.swift */; };
+		654D59781F2883050029577E /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D59771F2883050029577E /* ContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A2DA7AFA1CF2C70FCFBCCDE /* Pods_heewapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heewapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6511ADE51F23937800F914F7 /* ProductVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		65394FA41F1DE134000E8037 /* heewapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heewapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65394FA71F1DE134000E8037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65394FA91F1DE134000E8037 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = heewapp/SignInVC.swift; sourceTree = "<group>"; };
@@ -38,10 +42,12 @@
 		65394FC11F1E79DB000E8037 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		65394FC31F1E7A35000E8037 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		65394FC51F1E7A58000E8037 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		65394FC71F1F5435000E8037 /* ItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
 		65394FC91F1F5744000E8037 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		65394FCC1F1F6B54000E8037 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		65394FCE1F1FB3A6000E8037 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		654D59731F27AF550029577E /* Posttest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posttest.swift; sourceTree = "<group>"; };
+		654D59751F287F9E0029577E /* NotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		654D59771F2883050029577E /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		A3DB42E934A34BFE438B41F0 /* Pods-heewapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.release.xcconfig"; sourceTree = "<group>"; };
 		C61CF60320B410847D0F3B86 /* Pods-heewapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heewapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heewapp/Pods-heewapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				65394FCE1F1FB3A6000E8037 /* Post.swift */,
+				654D59731F27AF550029577E /* Posttest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		65394FBC1F1DE24E000E8037 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65394FC91F1F5744000E8037 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,10 +130,11 @@
 			children = (
 				65394FA91F1DE134000E8037 /* SignInVC.swift */,
 				65394FC11F1E79DB000E8037 /* FeedVC.swift */,
-				65394FC71F1F5435000E8037 /* ItemVC.swift */,
+				6511ADE51F23937800F914F7 /* ProductVC.swift */,
 				65394FC31F1E7A35000E8037 /* PostVC.swift */,
 				65394FC51F1E7A58000E8037 /* ProfileVC.swift */,
-				65394FC91F1F5744000E8037 /* PostCell.swift */,
+				654D59751F287F9E0029577E /* NotificationVC.swift */,
+				654D59771F2883050029577E /* ContactVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,13 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6511ADE61F23937800F914F7 /* ProductVC.swift in Sources */,
 				65394FCD1F1F6B54000E8037 /* DataService.swift in Sources */,
 				65394FC61F1E7A58000E8037 /* ProfileVC.swift in Sources */,
 				65394FC21F1E79DB000E8037 /* FeedVC.swift in Sources */,
 				65394FAA1F1DE134000E8037 /* SignInVC.swift in Sources */,
+				654D59741F27AF550029577E /* Posttest.swift in Sources */,
 				65394FA81F1DE134000E8037 /* AppDelegate.swift in Sources */,
+				654D59761F287F9E0029577E /* NotificationVC.swift in Sources */,
 				65394FC01F1E785C000E8037 /* Constants.swift in Sources */,
-				65394FC81F1F5435000E8037 /* ItemVC.swift in Sources */,
+				654D59781F2883050029577E /* ContactVC.swift in Sources */,
 				65394FC41F1E7A35000E8037 /* PostVC.swift in Sources */,
 				65394FCA1F1F5744000E8037 /* PostCell.swift in Sources */,
 				65394FCF1F1FB3A6000E8037 /* Post.swift in Sources */,

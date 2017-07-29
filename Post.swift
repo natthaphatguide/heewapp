@@ -9,12 +9,12 @@
 import Foundation
 
 class Post {
-    
+        
     private var _imageUrl: String!
     private var _brand: String!
-    private var _price: Int!
+    private var _price: String!
     private var _postKey: String!
-    
+
     var imageUrl: String {
         return _imageUrl
     }
@@ -23,7 +23,7 @@ class Post {
         return _brand
     }
     
-    var price: Int {
+    var price: String {
         return _price
     }
     
@@ -31,7 +31,7 @@ class Post {
         return _postKey
     }
     
-    init(imageUrl: String, brand: String, price: Int) {
+    init(imageUrl: String, brand: String, price: String) {
         self._imageUrl = imageUrl
         self._brand = brand
         self._price = price
@@ -48,7 +48,7 @@ class Post {
             self._brand = brand
         }
         
-        if let price = postData["price"] as? Int {
+        if let price = postData["price"] as? String {
             self._price = price
         }
         

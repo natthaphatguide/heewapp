@@ -14,6 +14,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
@@ -66,4 +67,29 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return PostCell()
         }
     }
+    
+    // Guide:
+    
+    
+   // func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   //     selectedPost = self.post[indexPath.row]
+   //     performSegue(withIdentifier: "ProductVC", sender: self)
+   //  }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            if segue.identifier == "showDetailVC" {
+                let selectItem = posts[indexPath.row]
+                let destination = segue.destination as! ProductVC
+                //selectItem.เมมเบอร์ในคลาส
+                destination.viewDetail? = selectItem
+                
+                
+                //destination.postImages = selectItem.imageUrl
+                //destination.brands = selectItem.brand
+                //destination.prices = selectItem.price
+            }
+        }
+    }
+    
 }

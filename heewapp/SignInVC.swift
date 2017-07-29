@@ -37,7 +37,7 @@ class SignInVC: UIViewController {
             if error != nil {
                 print("GUIDE: Unable to authenticate with Facebook")
             } else if result?.isCancelled == true {
-                print("GUIDE: User   authenticate with Facebook")
+                print("GUIDE: User cancelled authenticate with Facebook")
             } else {
                 print("GUIDE: Successfully authenticate with Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)

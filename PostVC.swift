@@ -80,11 +80,13 @@ class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationCont
         
     }
     
+    //Section160: Make post works
     func postToFirebase(imgUrl:String) {
+        
         let post: Dictionary<String, Any> = [
             "imageUrl": imgUrl,
             "brand": brandField.text!,
-            "price": 0              //How to post number??
+            "price": 0           //How to post number??
         ]
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
@@ -98,6 +100,9 @@ class PostVC: UIViewController,UIImagePickerControllerDelegate, UINavigationCont
         //tableView.reloadData()
         
     }
+    
+    
+    
     
 }
 

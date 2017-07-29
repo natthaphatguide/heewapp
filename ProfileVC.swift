@@ -14,8 +14,6 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func signOutPressed(_ sender: Any) {
@@ -23,6 +21,11 @@ class ProfileVC: UIViewController {
         print("GUIDE: ID removed from keychain \(keychainResult)")
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "SignInVC", sender: nil)
+    }
+    
+    
+    @IBAction func editContactBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "ContactVC", sender: nil)
     }
 
 }
